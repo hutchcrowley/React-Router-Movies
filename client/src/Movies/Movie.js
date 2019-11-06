@@ -4,6 +4,12 @@ import axios from 'axios'
 const Movie = (props) => {
   const [movie, setMovie] = useState(null)
 
+  const [savedList, setSavedList] = useState([])
+
+  const addToSavedList = (movie) => {
+    setSavedList([...savedList, movie])
+  }
+
   useEffect(() => {
     const id = props.match.params.id
     // change ^^^ that line and grab the id from the URL
@@ -47,7 +53,9 @@ const Movie = (props) => {
           </div>
         ))}
       </div>
-      <div className="save-button">Save</div>
+      <button onClick={addToSavedList} className="save-button">
+        Save
+      </button>
     </div>
   )
 }

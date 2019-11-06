@@ -5,6 +5,10 @@ body {
   background-color: #f2f2f2;
 }
 
+a {
+  text-decoration: none;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -14,6 +18,11 @@ body {
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 .movie-director {
@@ -60,6 +69,7 @@ body {
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
+  border-radius: 2px;
 }
 .save-button:hover {
   background-color: green;
@@ -69,4 +79,13 @@ body {
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+  text-decoration: none;
+  color: #000000;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+
+.home-button:hover {
+  background-color: blue;
+  color: white;
 }
